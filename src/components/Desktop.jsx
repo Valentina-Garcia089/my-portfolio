@@ -6,7 +6,7 @@ import Projects from "./Projects";
 import Contact from "./Contact";
 import Dock from "./Dock";
 
-function Desktop ({ activeWindow, openWindow, closeWindow }) {
+function Desktop ({ activeWindow, isMinimized, openWindow, closeWindow, minimizeWindow }) {
     return (
         <div>
             {/* si se hace click en el icono se abre la ventana: */}
@@ -17,29 +17,33 @@ function Desktop ({ activeWindow, openWindow, closeWindow }) {
 
             {/* Window solo debe mostrar el contenido, no decidir lo que se muestra */}
             {/*window es dinamico y no siempre se muestra*/}
-            {activeWindow === "about" && (
+            {activeWindow === "about" && !isMinimized && (
                 <Window closeWindow={closeWindow}>
                     <About />
                 </Window>
             )}
-            {activeWindow === "technologies" && (
+            {activeWindow === "technologies" && !isMinimized &&(
                 <Window closeWindow={closeWindow}>
-                    <Technologies />
+                    <Technologies /> {/* {children} de window */}
                 </Window>
             )}
-            {activeWindow === "projects" && (
+            {activeWindow === "projects" && !isMinimized &&(
                 <Window closeWindow={closeWindow}>
                     <Projects />
                 </Window>
             )}
-            {activeWindow === "contact" && (
+            {activeWindow === "contact" && !isMinimized &&(
                 <Window closeWindow={closeWindow}>
                     <Contact />
                 </Window>
             )}
 
             {/*Dock no es opcional y siempre debe existir, solo cambia el icono, por eso no se trata como "Window" */}
-            <Dock activeWindow={activeWindow} />
+            <Dock 
+                activeWindow={activeWindow}
+                isMinimized ={isMinimized}
+                minimizeWindow={minimizeWindow}
+            />
         </div>
     );
 }

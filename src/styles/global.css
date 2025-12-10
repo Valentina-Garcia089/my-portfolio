@@ -1,0 +1,14 @@
+.icon {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80px;
+    cursor: pointer;
+}
+
+.icon img {
+    width: 64px;
+    height: 64px;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid #0002;
+}
