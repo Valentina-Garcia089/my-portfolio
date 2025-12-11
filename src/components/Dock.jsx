@@ -1,6 +1,6 @@
 import Icon from "./Icon";
 
-function Dock ({activeWindow, isMinimized, minimizeWindow}){
+function Dock ({activeWindow, minimizeWindow}){
 
     if(!activeWindow){
         return <div className="dock"></div>
