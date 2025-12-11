@@ -2,7 +2,9 @@
 function Window ({closeWindow, children}){
     return (
         <div className="window">
-            <button onClick={closeWindow}>X</button>
+            <div className="button-container">
+                <button onClick={closeWindow}>✘</button>
+            </div>
 
             <div className="window-content">
                 {children} {/* about, projects,etc*/}

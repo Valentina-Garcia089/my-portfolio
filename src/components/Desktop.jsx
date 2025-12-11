@@ -8,12 +8,15 @@ import Dock from "./Dock";
 
 function Desktop ({ activeWindow, isMinimized, openWindow, closeWindow, minimizeWindow }) {
     return (
-        <div>
-            {/* si se hace click en el icono se abre la ventana: */}
-            <Icon name="about" onOpen={() => openWindow("about")} />
-            <Icon name="technologies" onOpen={() => openWindow("technologies")} />
-            <Icon name="projects" onOpen={() => openWindow("projects")} />
-            <Icon name="contact" onOpen={() => openWindow("contact")} />
+        <div className="desktop">
+            <div className="icon-grid">
+                {/* si se hace click en el icono se abre la ventana: */}
+                <Icon name="about" onOpen={() => openWindow("about")} />
+                <Icon name="technologies" onOpen={() => openWindow("technologies")} />
+                <Icon name="projects" onOpen={() => openWindow("projects")} />
+                <Icon name="contact" onOpen={() => openWindow("contact")} />
+            </div>
+
 
             {/* Window solo debe mostrar el contenido, no decidir lo que se muestra */}
             {/*window es dinamico y no siempre se muestra*/}
