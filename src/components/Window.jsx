@@ -1,11 +1,11 @@
 import { motion } from "framer-motion";
 
 // children existe porque en Desktop se renderiza el componente especifico dentro de Window
-function Window ({closeWindow, children}){
+function Window ({closeWindow, children, isMinimized}){
     const variants = {
         initial: { 
             opacity: 0, 
-            scale: 0.9, 
+            scale: 0.9,
             x: "-50%", 
             y: "-50%"
         },
@@ -17,6 +17,14 @@ function Window ({closeWindow, children}){
             y: "-50%",
             transition: { duration: 0.25, ease: "easeOut" }
         },
+
+        minimize: {
+            opacity: 0,
+            scale: 0.2,
+            y: "80%",
+            transition: { duration: 0.25, ease: "easeIn" }
+        },
+
         exit: {
             opacity: 0,
             scale: 0.9,
@@ -32,7 +40,7 @@ function Window ({closeWindow, children}){
             className="window"
             variants={variants}
             initial="initial"
-            animate="animate"
+            animate={isMinimized ? "minimize" : "animate"}
             exit="exit"
         >
             <div className="button-container">

@@ -11,7 +11,7 @@ import { AnimatePresence } from "framer-motion";
 
 function Desktop ({ activeWindow, isMinimized, openWindow, closeWindow, minimizeWindow }) {
     function renderActiveWindow() {
-        if (!activeWindow || isMinimized) {
+        if (!activeWindow) {
             return null;
         }
 
@@ -31,6 +31,9 @@ function Desktop ({ activeWindow, isMinimized, openWindow, closeWindow, minimize
                 key={activeWindow} 
                 closeWindow={closeWindow}
                 isMinimized={isMinimized}
+
+                // REVISAR
+                activeWindow={activeWindow}
             >
                 {components[activeWindow]} {/* {children} de window */}
             </Window>
@@ -61,6 +64,7 @@ function Desktop ({ activeWindow, isMinimized, openWindow, closeWindow, minimize
             <Dock 
                 activeWindow={activeWindow}
                 minimizeWindow={minimizeWindow}
+                openWindow={openWindow}
             />
         </div>
     );
