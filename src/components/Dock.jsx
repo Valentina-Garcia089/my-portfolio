@@ -1,27 +1,21 @@
 import Icon from "./Icon";
+import StartMenu from "./StartMenu";
+import { AnimatePresence } from "framer-motion";
 
-function Dock ({activeWindow, minimizeWindow, openWindow}){
-
-    if(!activeWindow){
-        return <div className="dock">
-            <Icon 
-                name="Menu"
-                showLabel={false}
-                onOpen={() => openWindow("Menu")}
-            />
-        </div>
-    }
-
-
+function Dock ({activeWindow, minimizeWindow, openMenu, isMenuOpen}){
     return (
         <div className="dock">
+            <AnimatePresence>
+                {isMenuOpen && <StartMenu />}
+            </AnimatePresence>
+
             <Icon 
                 name="Menu"
                 showLabel={false}
-                onOpen={minimizeWindow}
+                onOpen={openMenu}
             />
 
-            {activeWindow !== "Menu" &&(
+            {activeWindow &&(
                 <Icon 
                     name={activeWindow} 
                     showLabel={false}

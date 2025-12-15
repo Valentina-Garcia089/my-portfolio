@@ -125,7 +125,8 @@ body, div {
 .window {
     width: clamp(340px, 65vw, 600px);  
     height: 400px;
-    background-color: #CFCFCF;
+    background-color: #fff;
+    color: #07112b;
     border-radius: 14px;
 
     display: flex;
@@ -136,7 +137,118 @@ body, div {
     position: fixed;
     top: 50%;
     left: 50%;
+
+    overflow: hidden;
 }
+
+.window-content{
+    width: 100%;
+    padding: 22px;
+
+    overflow: auto;
+}
+
+.content, .project-card{
+    letter-spacing: 1px;
+    text-align: justify;
+}
+
+
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 22px;
+}
+
+.project-card{
+    display: block;
+    background-color: transparent;
+    /* width: 220px; */
+    width: clamp(230px, 25vw, 258px);
+    height: 280px;
+    border-radius: 20px;
+    position: relative;
+
+    box-shadow: 0 8px 16px rgba(20, 40, 120, 0.35);
+
+    transition: box-shadow 0.4s ease, transform 0.2s ease;
+}
+
+.project-card, .project-card:active, .project-card:visited{
+    text-decoration: none;
+    color: inherit;
+}
+
+.project-card:hover{
+    box-shadow: 0 12px 30px rgba(20, 40, 120, 0.15);
+}
+
+
+.card-front, .card-back{
+    backface-visibility: hidden;
+    transition: transform 0.8s;
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+}
+
+.project-card:hover .card-front {
+    /*La perspectiva indica cuan pegado a "nuestro rostro" estará la animación*/
+    transform: perspective(1500px) rotateY(180deg);
+}
+
+.project-card:active{
+    transform: scale(0.97) translateY(3px);
+}
+
+.card-front {
+    transform: perspective(1500px) rotateY(0deg);
+    background-color: #e8ecfc;
+}
+
+.image-container{
+    width: fit-content;
+    max-width: 80%;
+    height: 150px;
+    border-radius: 20px;
+}
+
+.card-front img{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+
+    filter: drop-shadow(2px 4px 7px rgba(20, 40, 120, 0.479));
+
+    object-fit: contain;
+}
+
+.card-back {
+    position: absolute;
+    background-color: #d5ddfa;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    display: grid;
+    place-content: center;
+    padding: 10px 17px;
+    transform: perspective(1500px) rotateY(-180deg);
+}
+
+.project-card:hover .card-back {
+    transform: perspective(1500px) rotateY(0deg);
+}
+
+
+
 
 .button-container{
     background-color: #0f225fad;
@@ -185,6 +297,7 @@ body, div {
     display: flex;
     flex-direction: row;
     gap: 12px;
+    /* overflow: hidden; */
 }
 
 .dock:has(.icon) .icon {
@@ -203,4 +316,39 @@ body, div {
     height: 40px;
     image-rendering: pixelated;
 }
+
+
+.start-menu {
+    position: fixed;
+    bottom: 55px;
+    left: 10px;
+
+    width: 160px;
+    height: 60px;
+
+    background: #cfcfcf;
+    border-radius: 10px;
+
+    padding: 8px 10px;
+    z-index: -1;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.power-btn {
+    width: 100%;
+    height: 36px;
+
+    background: #b12b2b;
+    color: white;
+    border: none;
+    border-radius: 6px;
+
+    cursor: pointer;
+}
+
 

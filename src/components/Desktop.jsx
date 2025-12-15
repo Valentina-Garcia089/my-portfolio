@@ -5,11 +5,12 @@ import Technologies from "./Technologies";
 import Projects from "./Projects";
 import Contact from "./Contact";
 import Dock from "./Dock";
+import StartMenu from "./StartMenu";
 import DesktopBackground from "./DesktopBackground";
 import { AnimatePresence } from "framer-motion";
 
 
-function Desktop ({ activeWindow, isMinimized, openWindow, closeWindow, minimizeWindow }) {
+function Desktop ({ activeWindow, isMinimized, isMenuOpen, openWindow, closeWindow, minimizeWindow, openMenu }) {
     function renderActiveWindow() {
         if (!activeWindow) {
             return null;
@@ -31,9 +32,6 @@ function Desktop ({ activeWindow, isMinimized, openWindow, closeWindow, minimize
                 key={activeWindow} 
                 closeWindow={closeWindow}
                 isMinimized={isMinimized}
-
-                // REVISAR
-                activeWindow={activeWindow}
             >
                 {components[activeWindow]} {/* {children} de window */}
             </Window>
@@ -59,12 +57,17 @@ function Desktop ({ activeWindow, isMinimized, openWindow, closeWindow, minimize
                 {renderActiveWindow()}
             </AnimatePresence>
 
+            {/* <AnimatePresence>
+                {isMenuOpen && <StartMenu />}
+            </AnimatePresence> */}
+
 
             {/*Dock no es opcional y siempre debe existir, solo cambia el icono, por eso no se trata como "Window" */}
             <Dock 
                 activeWindow={activeWindow}
                 minimizeWindow={minimizeWindow}
-                openWindow={openWindow}
+                openMenu={openMenu}
+                isMenuOpen={isMenuOpen}
             />
         </div>
     );
