@@ -72,10 +72,10 @@ function Desktop ({ activeWindow, isMinimized, isMenuOpen, isShutdown, openWindo
                 <>
                     <div className="icon-grid">
                         {/* si se hace click en el icono se abre la ventana: */}
-                        <Icon name="About" onOpen={() => openWindow("About")} />
-                        <Icon name="Technologies" onOpen={() => openWindow("Technologies")} />
-                        <Icon name="Projects" onOpen={() => openWindow("Projects")} />
-                        <Icon name="Contact" onOpen={() => openWindow("Contact")} />
+                        <Icon name="about" onOpen={() => openWindow("About")} />
+                        <Icon name="technologies" onOpen={() => openWindow("Technologies")} />
+                        <Icon name="projects" onOpen={() => openWindow("Projects")} />
+                        <Icon name="contact" onOpen={() => openWindow("Contact")} />
                     </div>
 
             
