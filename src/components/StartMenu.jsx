@@ -1,6 +1,6 @@
-import { motion, AnimatePresence } from "framer-motion";
+import { motion} from "framer-motion";
 
-function StartMenu() {
+function StartMenu({shutdown}) {
 
     return (
         <motion.div
@@ -10,7 +10,7 @@ function StartMenu() {
             exit={{ opacity: 0, y: 14 }}
             transition={{ duration: 0.1 }}
             >
-            <button className="power-btn">Apagar</button>
+            <button className="power-btn" onClick={shutdown}>Shut down</button>
         </motion.div>
     );
 }

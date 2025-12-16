@@ -455,4 +455,17 @@ body, div {
     cursor: pointer;
 }
 
+.shutdown-screen {
+    width: 100vw;
+    height: 100vh;
+    background: #000;
+    color: #aaa;
+    display: grid;
+    place-items: center;
+    font-size: 1.2rem;
+}
+
+
+
+
 
