@@ -5,7 +5,7 @@ function Icon ({ name, onOpen, showLabel = true}){
             className="icon" 
             onClick={onOpen}
         >
-            <img src={`icons/${name}.png`} alt={`Icono de ${name}`} />
+            <img src={`/icons/${name}.png`} alt={`Icono de ${name}`} />
 
             {showLabel && (
                 <span>{name}</span>
