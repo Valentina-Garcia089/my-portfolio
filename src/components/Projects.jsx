@@ -5,19 +5,19 @@ function Projects (){
         {
             title: "Portfolio",
             image: "/projects/portfolio.png",
-            description: "Mi portfolio personal con interfaz tipo desktop",
+            description: "Portafolio personal interactivo que simula un sistema operativo, donde cada sección se abre en ventanas animadas para mostrar proyectos, tecnologías y contacto",
             url: "https://tusitio.com"
         },
         {
             title: "TuDespensa",
             image: "/projects/tudespensa.png",
-            description: "App para gestión de despensa",
+            description: "Frontend de una aplicación web de listas de supermercado, con lógica en JavaScript, manejo de usuarios y diseño de interfaz, desarrollado como proyecto universitario",
             url: "https://tuudespensa.netlify.app/"
         },
         {
             title: "Pixel Pomodoro",
             image: "/projects/pomodoro.png",
-            description: "Descripción corta",
+            description: "Pomodoro interactivo hecho en React, con una mascota en pixel art animada que acompaña cada sesión de enfoque y descanso. Diseñado como práctica de manejo de estado y lógica basada en tiempo",
             url: "https://pixel-pomodoro-39wm.vercel.app/"
         }
     ];
