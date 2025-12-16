@@ -166,7 +166,7 @@ body, div {
 }
 
 .techno-card{
-    width: clamp(100px, 9vw, 114px);
+    width: clamp(100px, 100%, 114px);
     height: 120px;
 
     display: flex;

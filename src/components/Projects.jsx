@@ -6,7 +6,7 @@ function Projects (){
             title: "Portfolio",
             image: "/projects/portfolio.png",
             description: "Portafolio personal interactivo que simula un sistema operativo, donde cada sección se abre en ventanas animadas para mostrar proyectos, tecnologías y contacto",
-            url: "https://tusitio.com"
+            url: "https://my-portfolio-rho-ten-26.vercel.app/"
         },
         {
             title: "TuDespensa",
