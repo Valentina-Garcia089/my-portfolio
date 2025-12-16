@@ -1,16 +1,42 @@
-# React + Vite
+# My Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este proyecto corresponde a mi portafolio personal como desarrolladora frontend.  
+Está diseñado como una experiencia interactiva que simula un sistema operativo, donde cada sección del portafolio se representa como un icono que abre una ventana con su respectiva información.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Secciones
 
-## React Compiler
+El portafolio incluye las siguientes secciones:
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+- **About**: Información personal y perfil como desarrolladora.
+- **Technologies**: Tecnologías y herramientas que utilizo.
+- **Projects**: Proyectos desarrollados, presentados mediante tarjetas animadas.
+- **Contact**: Información de contacto y enlaces relevantes.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Características
+
+- Interfaz inspirada en un sistema operativo.
+- Sistema de ventanas para navegar entre secciones.
+- Animaciones suaves usando Framer Motion.
+- Diseño visual con tarjetas y layouts dinámicos.
+- Navegación intuitiva basada en iconos interactivos.
+
+---
+
+## Tecnologías utilizadas
+
+- React
+- JavaScript
+- CSS
+- Framer Motion
+
+---
+
+## Propósito del proyecto
+
+El objetivo de este proyecto es mostrar mis habilidades como desarrolladora frontend de una forma creativa e interactiva, alejándome de un portafolio tradicional y explorando nuevas formas de presentar información mediante animaciones y diseño de interfaces.
+
+Este po
