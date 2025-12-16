@@ -18,10 +18,10 @@ function Desktop ({ activeWindow, isMinimized, isMenuOpen, isShutdown, openWindo
 
 
         const components = {
-            About: <About />,
-            Technologies: <Technologies />,
-            Projects: <Projects />,
-            Contact: <Contact />
+            about: <About />,
+            technologies: <Technologies />,
+            projects: <Projects />,
+            contact: <Contact />
         };
 
         return (
