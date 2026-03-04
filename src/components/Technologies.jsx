@@ -24,8 +24,16 @@ function Technologies (){
             image: "/technologies/java.png",
         },
         {
+            title: "Spring Boot",
+            image: "/technologies/springBoot.png",
+        },
+        {
             title: "C++",
             image: "/technologies/c.png",
+        },
+        {
+            title: "C#",
+            image: "/technologies/cSharp.png",
         },
         {
             title: "PostgreSQL",

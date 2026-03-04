@@ -31,54 +31,40 @@ body, div {
 
 .desktop-background {
     position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+    inset: 0;
+    overflow: hidden;
+    z-index: -1;
+    background: #040813;
+}
 
-
+.desktop-background::after {
+    content: "";
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    top: -50%;
+    left: -50%;
     background: 
         var(--smallStars),
         var(--mediumStars),
         var(--bigStars),
-    
         linear-gradient(
             135deg,
             #040813 0%,
-            #07112b 25%,
-            #0c1c47 50%,
-            #1b336a 80%,
-            #2f4d93 100%
-        );
-
-    background-size: 140% 140%; /*Para animar*/
+            #07112b 25%, 
+            #0c1c47 50%, 
+            #1b336a 80%, 
+            #2f4d93 100%);
+    
     animation: space 35s linear infinite;
-
-    z-index: -1;
+    will-change: transform;
 }
-
 
 @keyframes space {
-    0% {
-        background-position: 0% 50%;
-    }
-    25% {
-        background-position: 30% 70%;
-    }
-    50% {
-        background-position: 80% 40%;
-    }
-    75% {
-        background-position: 40% 90%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
+    0% { transform: translate(0, 17%); }
+    50% { transform: translate(-5%, -25%) rotate(1deg); }
+    100% { transform: translate(0, 17%); }
 }
-
-
-
-
 
 
 .icon-grid{
@@ -151,7 +137,7 @@ body, div {
     overflow: auto;
 }
 
-.content, .project-card{
+.content{
     letter-spacing: 1px;
     text-align: justify;
 }
@@ -181,78 +167,7 @@ body, div {
     max-width: 80%;
 }
 
-
-/*------------------ PROJECTS -------------------*/
-
-.projects-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(230px, 258px));
-    justify-content: center;
-    /* align-items: center; */
-    gap: 22px;
-}
-
-.project-card{
-    display: block;
-    background-color: transparent;
-    /* width: 220px; */
-    width: clamp(230px, 100%, 258px);
-    height: 280px;
-    border-radius: 20px;
-    position: relative;
-
-    box-shadow: 0 8px 16px rgba(20, 40, 120, 0.35);
-
-    transition: box-shadow 0.4s ease, transform 0.2s ease;
-}
-
-.project-card, .project-card:active, .project-card:visited, .contact-card{
-    text-decoration: none;
-    color: inherit;
-}
-
-.project-card:hover{
-    box-shadow: 0 12px 30px rgba(20, 40, 120, 0.15);
-}
-
-
-.card-front, .card-back{
-    backface-visibility: hidden;
-    transition: transform 0.8s;
-    border-radius: 20px;
-    width: 100%;
-    height: 100%;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-    text-align: center;
-}
-
-.project-card:hover .card-front {
-    /*La perspectiva indica cuan pegado a "nuestro rostro" estará la animación*/
-    transform: perspective(1500px) rotateY(180deg);
-}
-
-.project-card:active{
-    transform: scale(0.97) translateY(3px);
-}
-
-.card-front {
-    transform: perspective(1500px) rotateY(0deg);
-    background-color: #e8ecfc;
-}
-
-.image-container{
-    width: fit-content;
-    max-width: 80%;
-    height: 150px;
-    border-radius: 20px;
-}
-
-.image-card img ,.card-front img{
+.image-card img{
     width: 100%;
     height: 100%;
     border-radius: 20px;
@@ -261,25 +176,68 @@ body, div {
 }
 
 
-.card-front img {
-    filter: drop-shadow(2px 4px 7px rgba(20, 40, 120, 0.479));
-}
+/*------------------ PROJECTS -------------------*/
 
-.card-back {
-    position: absolute;
-    background-color: #d5ddfa;
-    width: 100%;
-    height: 100%;
-    top: 0;
+.projects-container {
     display: grid;
-    place-content: center;
-    padding: 10px 17px;
-    transform: perspective(1500px) rotateY(-180deg);
+    grid-template-columns: repeat(auto-fit, minmax(230px, 255px));
+    justify-content: center;
+    justify-items: center;
+    gap: 25px;
 }
 
-.project-card:hover .card-back {
-    transform: perspective(1500px) rotateY(0deg);
+.project-card{
+    padding: 16px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    width: 255px;
+    height: 100%;
+
+    border-style: none;
+    border-radius: 20px;
+    background-color: #E6F4EA;
+
+    box-shadow: 2px 1px 6px #001223;
+    cursor: pointer;
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+.project-card:hover {
+    transform: translateY(-8px) rotate(1deg);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.project-card, .project-card:active, .project-card:visited, .contact-card{
+    text-decoration: none;
+    color: inherit;
+}
+
+.project-card h3{
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+    color: #081436;
+    margin: 0;
+}
+
+.project-card p{
+    font-size: 0.9rem;
+    margin-bottom: 0;
+    color: #1f2a47;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
