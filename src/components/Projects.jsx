@@ -4,21 +4,23 @@ function Projects (){
     const projects = [
         {
             title: "Portfolio",
-            image: "/projects/portfolio.png",
-            description: "Portafolio personal interactivo que simula un sistema operativo, donde cada sección se abre en ventanas animadas para mostrar proyectos, tecnologías y contacto",
+            description: "Personal interactive portfolio that simulates an operating system, where each section opens in animated windows to show projects, technologies and the contact part",
             url: "https://my-portfolio-rho-ten-26.vercel.app/"
         },
         {
             title: "TuDespensa",
-            image: "/projects/tudespensa.png",
-            description: "Frontend de una aplicación web de listas de supermercado, con lógica en JavaScript, manejo de usuarios y diseño de interfaz, desarrollado como proyecto universitario",
+            description: "Frontend of a grocery list web application with JavaScript-based logic, user management features, and interface design, developed as part of a university project",
             url: "https://tuudespensa.netlify.app/"
         },
         {
             title: "Pixel Pomodoro",
-            image: "/projects/pomodoro.png",
-            description: "Pomodoro interactivo hecho en React, con una mascota en pixel art animada que acompaña cada sesión de enfoque y descanso. Diseñado como práctica de manejo de estado y lógica basada en tiempo",
+            description: "Interactive pomodoro made in React with an animated pixel art pet that accompanies every focus and rest session. Designed as a practice of managing states and logic based on time",
             url: "https://pixel-pomodoro-39wm.vercel.app/"
+        },
+        {
+            title: "BuscaTuVehiculo",
+            description: "Full-stack vehicle management system featuring a Spring Boot API and a React frontend. It includes JWT-based authentication, role-based access control (Admin/User) and a PostgreSQL database to manage real-time inventory and customer inquiries",
+            url: "https://vehiculos-front.vercel.app/"
         }
     ];
 
@@ -30,7 +32,6 @@ function Projects (){
                 <ProjectCard
                     key={project.title}
                     title={project.title}
-                    image={project.image}
                     description={project.description}
                     url={project.url}
                 />
