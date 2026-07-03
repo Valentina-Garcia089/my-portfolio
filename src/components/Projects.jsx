@@ -8,6 +8,16 @@ function Projects (){
             url: "https://my-portfolio-rho-ten-26.vercel.app/"
         },
         {
+            title: "Vita Aurea",
+            description: "Full-stack e-commerce platform for supplements featuring a Spring Boot API and a Next.js frontend. Containerized with Docker, it integrates a PostgreSQL database to manage real-time product inventory, and order fulfillment.",
+            url: "https://www.somosvitaaurea.com/"
+        },
+        {
+            title: "BuscaTuVehiculo",
+            description: "Full-stack vehicle management system featuring a Spring Boot API and a React frontend. It includes JWT-based authentication, role-based access control (Admin/User) and a PostgreSQL database to manage real-time inventory and customer inquiries",
+            url: "https://vehiculos-front.vercel.app/"
+        },
+        {
             title: "TuDespensa",
             description: "Frontend of a grocery list web application with JavaScript-based logic, user management features, and interface design, developed as part of a university project",
             url: "https://tuudespensa.netlify.app/"
@@ -16,11 +26,6 @@ function Projects (){
             title: "Pixel Pomodoro",
             description: "Interactive pomodoro made in React with an animated pixel art pet that accompanies every focus and rest session. Designed as a practice of managing states and logic based on time",
             url: "https://pixel-pomodoro-39wm.vercel.app/"
-        },
-        {
-            title: "BuscaTuVehiculo",
-            description: "Full-stack vehicle management system featuring a Spring Boot API and a React frontend. It includes JWT-based authentication, role-based access control (Admin/User) and a PostgreSQL database to manage real-time inventory and customer inquiries",
-            url: "https://vehiculos-front.vercel.app/"
         }
     ];
 
