@@ -36,8 +36,16 @@ function Technologies (){
             image: "/technologies/cSharp.png",
         },
         {
+            title: "Python",
+            image: "/technologies/Python.webp",
+        },
+        {
             title: "PostgreSQL",
             image: "/technologies/postgresql.png",
+        },
+        {
+            title: "n8n",
+            image: "/technologies/n8n.png",
         }
     ];
 
