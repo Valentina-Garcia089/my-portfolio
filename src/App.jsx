@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Introduction from './components/Introduction';
 import Desktop from "./components/Desktop"
 
@@ -37,6 +37,32 @@ function App() {
   function shutdown() {
     setIsShutdown(true);
   }
+
+
+
+
+  const handleWakeUp = () => {
+    //solo funciona si ya se le dio a shut down
+    if (isShutdown) {
+      setIsShutdown(false);
+    }
+  };
+
+
+
+  useEffect(() => {
+    //esto "escuchará" a toda la pantalla
+    if (isShutdown) {
+      document.addEventListener('mousemove', handleWakeUp);
+    }
+
+    return () => {
+      document.removeEventListener('mousemove', handleWakeUp);
+    };
+  }, [isShutdown]);
+
+
+
 
   return (
     <div>

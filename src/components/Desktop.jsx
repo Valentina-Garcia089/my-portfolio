@@ -52,8 +52,7 @@ function Desktop ({ activeWindow, isMinimized, isMenuOpen, isShutdown, openWindo
                         className="shutdown-screen"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
-                        //para implementar proximamente
-                        // exit={{ opacity: 0 }}
+                        exit={{ opacity: 0 }}
                         transition={{ duration: 0.6, ease: "easeInOut" }}
                         >
                         <motion.p
@@ -61,7 +60,7 @@ function Desktop ({ activeWindow, isMinimized, isMenuOpen, isShutdown, openWindo
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.3 }}
                         >
-                            Shutting down...
+                            ...
                         </motion.p>
                         </motion.div>
                     )}
